@@ -1,0 +1,25 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# (PART) Questions about your goals {-} 
+# What is your goal?
+
+## Exploratory or hypothesis generation
+
+## Inferential or hypothesis testing "Are things different"
+
+This is a hypothesis, not a description.  Description can highlight, but doesn't test what's different.  Descriptions can still have a bias (mean vs median vs range all show different things descriptively, PCA problems).  Doesn't mean it's an experiment.
+
+```{r cars}
+summary(cars)
+```
+
+## Physical or mechanistic predictions - you can only statistics them away sometimes
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
