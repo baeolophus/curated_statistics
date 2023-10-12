@@ -1,5 +1,7 @@
 # (PART) Specific tests {-} 
 
+# Email text for FAQ
+
 ## Decision trees/CART/classification tree/regression tree/ctree email text
 ### CART/ctree explanations
     
