@@ -1,0 +1,16 @@
+# Supervised learning {-}
+
+## Decision trees/CART/classification tree/regression tree/ctree email text
+### CART/ctree explanations
+    
+    - Start with this one, CART section mainly: [http://www.jstor.org/stable/10.1086/587826](http://www.jstor.org/stable/10.1086/587826)
+        
+    - [https://stats.stackexchange.com/questions/12140/conditional-inference-trees-vs-traditional-decision-trees](https://stats.stackexchange.com/questions/12140/conditional-inference-trees-vs-traditional-decision-trees)
+        
+    - [https://stats.stackexchange.com/questions/255150/how-to-interpret-this-decision-tree](https://stats.stackexchange.com/questions/255150/how-to-interpret-this-decision-tree)
+        
+### Examples of CART in the wild:
+    
+    - [https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/1051-0761%282006%29016%5B0687%3AHELMAR%5D2.0.CO%3B2](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/1051-0761%282006%29016%5B0687%3AHELMAR%5D2.0.CO%3B2)
+        
+    - Uses R’s ctree: [https://link.springer.com/article/10.1007/s11252-019-00896-0](https://link.springer.com/article/10.1007/s11252-019-00896-0)
