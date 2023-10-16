@@ -1,0 +1,26 @@
+# What each section has {-}
+
+## Explanation
+### The basics
+A simple explanation and hopefully figure of what the test does or gets at.
+
+### More technical
+
+#### Questions and data types
+Example problem structures and types of data you need.
+
+#### Key assumptions
+This is how to know if you can use the method.
+
+#### Key distinctions among related methods
+Within and among methods - related?
+
+#### Implementations and controversies
+
+### Most technical
+The key citations.
+
+## Examples "in the wild"
+Citations and what is useful in the paper.
+    
+
