@@ -1,7 +1,8 @@
 # Principal components analysis {-}
 
 ## Explanation.
-Cite Allison Horst's great whale figure here.
+Cite Allison Horst's whale figure here.
+
 ### Questions and data types
 
 ### Key assumptions
