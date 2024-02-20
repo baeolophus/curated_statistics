@@ -1,5 +1,7 @@
 # Distributions
 
+The underlying distribution of the variables in your sample population makes a big difference in what inferential statistics you can use.  Different methods assume (or don't) different distributions.  If you violate assumptions, sometimes the statistical tests or estimates from the methods may not be valid.
+
 ## Bounded
 
 ## Heteroscedascitity vs homoscedasicity
