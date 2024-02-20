@@ -13,8 +13,7 @@ It seems like objections to bootstrapping linear models (and presumably other co
 
 Venables and Ripley 2002, pg 164, say “we see bootstrapping as having little place in least-squares regression.  If the errors are close to normal, the standard theory suffices.  If not, there are better methods of fitting than least squares, or perhaps the data should be transformed […]”  Hastie et al. 2008 (Elements of Statistical Learning) seem in favor of bootstrapping
 
-Johnston, M. G. & Faulkner, C. A bootstrap approach is a superior statistical method for the comparison of non-normal data with differing variances. New Phytologist 230, 23–26 (2021).
--	This paper is enthusiastically in favor of the bootstrap at least for their relatively simple design to replace a t-test.
+@johnston_bootstrap_2021 are enthusiastically in favor of the bootstrap at least for their relatively simple design to replace a t-test.
 -	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8613103/#CR47 – says do all the other stuff like deal with random effects and autocorrelation first.  We have done this already.
 
 
