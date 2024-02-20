@@ -1,0 +1,10 @@
+# Distributions
+
+## Bounded
+
+## Heteroscedascitity vs homoscedasicity
+
+## Theoretical, existing, known
+
+## Simulated, randomized, computational
+
