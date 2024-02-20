@@ -127,7 +127,7 @@
 
 \title{Statistics for Scared People}
 \author{C.M. Curry}
-\date{2023-10-16}
+\date{2024-02-20}
 
 \begin{document}
 \maketitle
@@ -184,6 +184,38 @@ Note that the \texttt{echo\ =\ FALSE} parameter was added to the code chunk to p
 
 Peer-reviewed vs not: what can you cite?
 What helps?
+
+\hypertarget{distributions}{%
+\chapter{Distributions}\label{distributions}}
+
+\hypertarget{bounded}{%
+\section{Bounded}\label{bounded}}
+
+\hypertarget{heteroscedascitity-vs-homoscedasicity}{%
+\section{Heteroscedascitity vs homoscedasicity}\label{heteroscedascitity-vs-homoscedasicity}}
+
+\hypertarget{theoretical-existing-known}{%
+\section{Theoretical, existing, known}\label{theoretical-existing-known}}
+
+\hypertarget{simulated-randomized-computational}{%
+\section{Simulated, randomized, computational}\label{simulated-randomized-computational}}
+
+\hypertarget{when-to-use-either}{%
+\section{When to use either?}\label{when-to-use-either}}
+
+It seems like objections to bootstrapping linear models (and presumably other complex models) fall into two categories: 1. Sampling design isn't accounted for by complete randomization (ignoring stratification of categories or other sampling vagaries) 2. It's less elegant (???).
+
+Venables and Ripley 2002, pg 164, say ``we see bootstrapping as having little place in least-squares regression. If the errors are close to normal, the standard theory suffices. If not, there are better methods of fitting than least squares, or perhaps the data should be transformed {[}\ldots{]}'' Hastie et al.~2008 (Elements of Statistical Learning) seem in favor of bootstrapping
+
+\citet{johnston_bootstrap_2021} are enthusiastically in favor of the bootstrap at least for their relatively simple design to replace a t-test.
+- \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8613103/\#CR47} -- says do all the other stuff like deal with random effects and autocorrelation first. We have done this already.
+
+Example: should we run a Redundancy Analysis (RDA) a la \url{https://r.qcbs.ca/workshop10/book-en/redundancy-analysis.html} , which I understand has multivariate normality assumptions. He has a small sample size (around 35 I believe) and residuals are not coming out normal in smaller linear models.
+- \url{https://journals.sagepub.com/doi/10.1177/0049124189018002003}
+- \url{https://statisticsbyjim.com/hypothesis-testing/bootstrapping/}
+- \url{https://online.stat.psu.edu/stat555/node/119/}
+- \url{https://www.sagepub.com/sites/default/files/upm-binaries/21122_Chapter_21.pdf}
+- \url{https://link.springer.com/referenceworkentry/10.1007/978-1-4419-1153-7_84}
 
 \hypertarget{part-specific-tests}{%
 \part{Specific tests}\label{part-specific-tests}}

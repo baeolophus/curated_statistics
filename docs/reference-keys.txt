@@ -3,6 +3,12 @@ exploratory-or-hypothesis-generation
 inferential-or-hypothesis-testing-are-things-different
 physical-or-mechanistic-predictions---you-can-only-statistics-them-away-sometimes
 types-of-resources
+distributions
+bounded
+heteroscedascitity-vs-homoscedasicity
+theoretical-existing-known
+simulated-randomized-computational
+when-to-use-either
 explanation.
 questions-and-data-types
 key-assumptions
