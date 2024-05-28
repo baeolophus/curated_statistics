@@ -1,6 +1,16 @@
+---
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
 # Distributions
 
-The underlying distribution of the variables in your sample population makes a big difference in what inferential statistics you can use.  Different methods assume (or don't) different distributions.  If you violate assumptions, sometimes the statistical tests or estimates from the methods may not be valid.
+The underlying distribution of the variables in your sample population
+makes a big difference in what inferential statistics you can use.
+Different methods assume (or don't) different distributions. If you
+violate assumptions, sometimes the statistical tests or estimates from
+the methods may not be valid.
 
 ## Bounded
 
@@ -11,18 +21,32 @@ The underlying distribution of the variables in your sample population makes a b
 ## Simulated, randomized, computational
 
 ## When to use either?
-It seems like objections to bootstrapping linear models (and presumably other complex models) fall into two categories: 1. Sampling design isn’t accounted for by complete randomization (ignoring stratification of categories or other sampling vagaries) 2. It’s less elegant (???).
 
-Venables and Ripley 2002, pg 164, say “we see bootstrapping as having little place in least-squares regression.  If the errors are close to normal, the standard theory suffices.  If not, there are better methods of fitting than least squares, or perhaps the data should be transformed […]”  Hastie et al. 2008 (Elements of Statistical Learning) seem in favor of bootstrapping
+It seems like objections to bootstrapping linear models (and presumably
+other complex models) fall into two categories: 1. Sampling design isn't
+accounted for by complete randomization (ignoring stratification of
+categories or other sampling vagaries) 2. It's less elegant (???).
 
-@johnston_bootstrap_2021 are enthusiastically in favor of the bootstrap at least for their relatively simple design to replace a t-test.
--	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8613103/#CR47 – says do all the other stuff like deal with random effects and autocorrelation first.  We have done this already.
+Venables and Ripley 2002, pg 164, say "we see bootstrapping as having
+little place in least-squares regression. If the errors are close to
+normal, the standard theory suffices. If not, there are better methods
+of fitting than least squares, or perhaps the data should be transformed
+[...]" Hastie et al. 2008 (Elements of Statistical Learning) seem in
+favor of bootstrapping
 
+@johnston_bootstrap_2021 are enthusiastically in favor of the bootstrap
+at least for their relatively simple design to replace a t-test. -
+<https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8613103/#CR47> -- says do
+all the other stuff like deal with random effects and autocorrelation
+first. We have done this already.
 
-Example: should we run a Redundancy Analysis (RDA) a la https://r.qcbs.ca/workshop10/book-en/redundancy-analysis.html , which I understand has multivariate normality assumptions.  He has a small sample size (around 35 I believe) and residuals are not coming out normal in smaller linear models.
--	https://journals.sagepub.com/doi/10.1177/0049124189018002003
--	https://statisticsbyjim.com/hypothesis-testing/bootstrapping/ 
--	https://online.stat.psu.edu/stat555/node/119/ 
--	https://www.sagepub.com/sites/default/files/upm-binaries/21122_Chapter_21.pdf
--	https://link.springer.com/referenceworkentry/10.1007/978-1-4419-1153-7_84 
-
+Example: should we run a Redundancy Analysis (RDA) a la
+<https://r.qcbs.ca/workshop10/book-en/redundancy-analysis.html> , which
+I understand has multivariate normality assumptions. He has a small
+sample size (around 35 I believe) and residuals are not coming out
+normal in smaller linear models. -
+<https://journals.sagepub.com/doi/10.1177/0049124189018002003> -
+<https://statisticsbyjim.com/hypothesis-testing/bootstrapping/> -
+<https://online.stat.psu.edu/stat555/node/119/> -
+<https://www.sagepub.com/sites/default/files/upm-binaries/21122_Chapter_21.pdf> -
+<https://link.springer.com/referenceworkentry/10.1007/978-1-4419-1153-7_84>
