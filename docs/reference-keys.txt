@@ -30,3 +30,6 @@ implementations-and-controversies
 most-technical
 examples-in-the-wild
 how-to-run-the-ctree-version-of-cartdecision-trees
+decision-trees-also-known-as-classification-and-regression-trees-cart-conditional-inference-trees
+general-explanations-and-interpretation
+how-and-why-to-run-the-ctree-version-of-cartdecision-trees
