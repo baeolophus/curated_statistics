@@ -1,18 +1,15 @@
 # Supervised learning {-}
 
-## Decision trees/CART/classification tree/regression tree/ctree email text
-### CART/ctree explanations
+## Decision trees (also known as classification and regression trees [CART], conditional inference trees)
+
+### General explanations and interpretation
     
 - Start with [this paper](http://www.jstor.org/stable/10.1086/587826) and focus on the CART (Classification and Regression Tree) section mainly.
         
-- [https://stats.stackexchange.com/questions/12140/conditional-inference-trees-vs-traditional-decision-trees](https://stats.stackexchange.com/questions/12140/conditional-inference-trees-vs-traditional-decision-trees)
+- [A plainer-language explanation of how splits are chosen with a sample dataset on irises and some exerpts from ctree documentation.](https://stats.stackexchange.com/questions/255150/how-to-interpret-this-decision-tree)
         
-- [https://stats.stackexchange.com/questions/255150/how-to-interpret-this-decision-tree](https://stats.stackexchange.com/questions/255150/how-to-interpret-this-decision-tree)
-        
-### Examples of CART in the wild:
-    
-- [https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/1051-0761%282006%29016%5B0687%3AHELMAR%5D2.0.CO%3B2](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/1051-0761%282006%29016%5B0687%3AHELMAR%5D2.0.CO%3B2)
-        
+### Examples of CART in the wild
+      
 - These two papers use R’s `ctree()` from the `partykit` package
 
   - [Available through OU's subscriptions](https://link.springer.com/article/10.1007/s11252-019-00896-0)
@@ -21,9 +18,15 @@
   
     - [Access OU's Interlibrary Loan Article Request Form](https://ou.illiad.oclc.org/ILLiad/illiad.dll?Action=10&Form=22)
 
+- [A different algorithm to run CART: I suggest it because it has good figures and methods section](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/1051-0761%282006%29016%5B0687%3AHELMAR%5D2.0.CO%3B2)
+  
 
-### How to run the `ctree` version of CART/decision trees
+### How and why to run the `ctree` version of CART
 
-- The R vignette for the partykit package
+- [A short explanation of why ctree is a good general choice to minimize overfitting.](https://stats.stackexchange.com/questions/12140/conditional-inference-trees-vs-traditional-decision-trees)
 
-- `ggparty` allows for fancier and more informative plots
+- The [R vignette for the `partykit` package](https://cran.r-project.org/web/packages/partykit/vignettes/ctree.pdf) provides worked examples and code for both categorical responses (classification trees) and numeric responses (regression trees).
+
+- [`ggparty`](https://cran.r-project.org/web/packages/ggparty/vignettes/ggparty-graphic-partying.html) allows for fancier and more informative plots
+
+  - [Another example](https://luisdva.github.io/rstats/plotting-recursive-partitioning-trees/) using `ggparty` with a published dataset
