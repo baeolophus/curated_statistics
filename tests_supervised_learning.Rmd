@@ -3,14 +3,27 @@
 ## Decision trees/CART/classification tree/regression tree/ctree email text
 ### CART/ctree explanations
     
-    - Start with this one, CART section mainly: [http://www.jstor.org/stable/10.1086/587826](http://www.jstor.org/stable/10.1086/587826)
+- Start with [this paper](http://www.jstor.org/stable/10.1086/587826) and focus on the CART (Classification and Regression Tree) section mainly.
         
-    - [https://stats.stackexchange.com/questions/12140/conditional-inference-trees-vs-traditional-decision-trees](https://stats.stackexchange.com/questions/12140/conditional-inference-trees-vs-traditional-decision-trees)
+- [https://stats.stackexchange.com/questions/12140/conditional-inference-trees-vs-traditional-decision-trees](https://stats.stackexchange.com/questions/12140/conditional-inference-trees-vs-traditional-decision-trees)
         
-    - [https://stats.stackexchange.com/questions/255150/how-to-interpret-this-decision-tree](https://stats.stackexchange.com/questions/255150/how-to-interpret-this-decision-tree)
+- [https://stats.stackexchange.com/questions/255150/how-to-interpret-this-decision-tree](https://stats.stackexchange.com/questions/255150/how-to-interpret-this-decision-tree)
         
 ### Examples of CART in the wild:
     
-    - [https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/1051-0761%282006%29016%5B0687%3AHELMAR%5D2.0.CO%3B2](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/1051-0761%282006%29016%5B0687%3AHELMAR%5D2.0.CO%3B2)
+- [https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/1051-0761%282006%29016%5B0687%3AHELMAR%5D2.0.CO%3B2](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/1051-0761%282006%29016%5B0687%3AHELMAR%5D2.0.CO%3B2)
         
-    - Uses R’s ctree: [https://link.springer.com/article/10.1007/s11252-019-00896-0](https://link.springer.com/article/10.1007/s11252-019-00896-0)
+- These two papers use R’s `ctree()` from the `partykit` package
+
+  - [Available through OU's subscriptions](https://link.springer.com/article/10.1007/s11252-019-00896-0)
+  
+  - [Available via Interlibrary Loan](https://www.tandfonline.com/doi/full/10.1080/24694452.2022.2108747)
+  
+    - [Access OU's Interlibrary Loan Article Request Form](https://ou.illiad.oclc.org/ILLiad/illiad.dll?Action=10&Form=22)
+
+
+### How to run the `ctree` version of CART/decision trees
+
+- The R vignette for the partykit package
+
+- `ggparty` allows for fancier and more informative plots
