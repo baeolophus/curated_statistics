@@ -33,4 +33,7 @@ how-to-run-the-ctree-version-of-cartdecision-trees
 decision-trees-also-known-as-classification-and-regression-trees-cart-conditional-inference-trees
 general-explanations-and-interpretation
 how-and-why-to-run-the-ctree-version-of-cartdecision-trees
+<<<<<<< HEAD
 how-and-why-to-run-the-ctree-version-of-cart
+=======
+>>>>>>> 50f8cdced55de025f2c0073557a4955fd22fd69e

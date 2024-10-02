@@ -20,8 +20,7 @@
 
 - [A different algorithm to run CART: I suggest it because it has good figures and methods section](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/1051-0761%282006%29016%5B0687%3AHELMAR%5D2.0.CO%3B2)
   
-
-### How and why to run the `ctree` version of CART
+### How and why to run the `ctree` version of CART/decision trees
 
 - [A short explanation of why ctree is a good general choice to minimize overfitting.](https://stats.stackexchange.com/questions/12140/conditional-inference-trees-vs-traditional-decision-trees)
 
