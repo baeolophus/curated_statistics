@@ -23,14 +23,14 @@
 <meta name="author" content="C.M. Curry" />
 
 
-<meta name="date" content="2024-10-02" />
+<meta name="date" content="2025-02-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="principal-components-analysis.html"/>
+<link rel="prev" href="intraclass-correlation-coefficient-a.k.a.-repeatability.html"/>
 <link rel="next" href="what-each-section-has.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -123,6 +123,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -175,24 +198,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.7.3" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#once-you-have-decided-to-use-it-check-implementation"><i class="fa fa-check"></i><b>3.7.3</b> Once you have decided to use it, check implementation</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="intraclass-correlation-coefficient-a.k.a.-repeatability.html"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html"><i class="fa fa-check"></i>Intraclass Correlation Coefficient a.k.a. repeatability</a>
+<ul>
+<li class="chapter" data-level="3.8" data-path="intraclass-correlation-coefficient-a.k.a.-repeatability.html"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#explanation"><i class="fa fa-check"></i><b>3.8</b> Explanation</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="intraclass-correlation-coefficient-a.k.a.-repeatability.html"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#the-basics"><i class="fa fa-check"></i><b>3.8.1</b> The basics</a></li>
+<li class="chapter" data-level="3.8.2" data-path="intraclass-correlation-coefficient-a.k.a.-repeatability.html"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#more-technical"><i class="fa fa-check"></i><b>3.8.2</b> More technical</a></li>
+<li class="chapter" data-level="3.8.3" data-path="intraclass-correlation-coefficient-a.k.a.-repeatability.html"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#most-technical"><i class="fa fa-check"></i><b>3.8.3</b> Most technical</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="intraclass-correlation-coefficient-a.k.a.-repeatability.html"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#examples-in-the-wild"><i class="fa fa-check"></i><b>3.9</b> Examples “in the wild”</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="supervised-learning.html"><a href="supervised-learning.html"><i class="fa fa-check"></i>Supervised learning</a>
 <ul>
-<li class="chapter" data-level="3.8" data-path="supervised-learning.html"><a href="supervised-learning.html#decision-trees-also-known-as-classification-and-regression-trees-cart-conditional-inference-trees"><i class="fa fa-check"></i><b>3.8</b> Decision trees (also known as classification and regression trees [CART], conditional inference trees)</a>
+<li class="chapter" data-level="3.10" data-path="supervised-learning.html"><a href="supervised-learning.html#decision-trees-also-known-as-classification-and-regression-trees-cart-conditional-inference-trees"><i class="fa fa-check"></i><b>3.10</b> Decision trees (also known as classification and regression trees [CART], conditional inference trees)</a>
 <ul>
-<li class="chapter" data-level="3.8.1" data-path="supervised-learning.html"><a href="supervised-learning.html#general-explanations-and-interpretation"><i class="fa fa-check"></i><b>3.8.1</b> General explanations and interpretation</a></li>
-<li class="chapter" data-level="3.8.2" data-path="supervised-learning.html"><a href="supervised-learning.html#examples-of-cart-in-the-wild"><i class="fa fa-check"></i><b>3.8.2</b> Examples of CART in the wild</a></li>
-<li class="chapter" data-level="3.8.3" data-path="supervised-learning.html"><a href="supervised-learning.html#how-and-why-to-run-the-ctree-version-of-cartdecision-trees"><i class="fa fa-check"></i><b>3.8.3</b> How and why to run the <code>ctree</code> version of CART/decision trees</a></li>
+<li class="chapter" data-level="3.10.1" data-path="supervised-learning.html"><a href="supervised-learning.html#general-explanations-and-interpretation"><i class="fa fa-check"></i><b>3.10.1</b> General explanations and interpretation</a></li>
+<li class="chapter" data-level="3.10.2" data-path="supervised-learning.html"><a href="supervised-learning.html#examples-of-cart-in-the-wild"><i class="fa fa-check"></i><b>3.10.2</b> Examples of CART in the wild</a></li>
+<li class="chapter" data-level="3.10.3" data-path="supervised-learning.html"><a href="supervised-learning.html#how-and-why-to-run-the-ctree-version-of-cartdecision-trees"><i class="fa fa-check"></i><b>3.10.3</b> How and why to run the <code>ctree</code> version of CART/decision trees</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="what-each-section-has.html"><a href="what-each-section-has.html"><i class="fa fa-check"></i>What each section has</a>
 <ul>
-<li class="chapter" data-level="3.9" data-path="what-each-section-has.html"><a href="what-each-section-has.html#explanation"><i class="fa fa-check"></i><b>3.9</b> Explanation</a>
+<li class="chapter" data-level="3.11" data-path="what-each-section-has.html"><a href="what-each-section-has.html#explanation-1"><i class="fa fa-check"></i><b>3.11</b> Explanation</a>
 <ul>
-<li class="chapter" data-level="3.9.1" data-path="what-each-section-has.html"><a href="what-each-section-has.html#the-basics"><i class="fa fa-check"></i><b>3.9.1</b> The basics</a></li>
-<li class="chapter" data-level="3.9.2" data-path="what-each-section-has.html"><a href="what-each-section-has.html#more-technical"><i class="fa fa-check"></i><b>3.9.2</b> More technical</a></li>
-<li class="chapter" data-level="3.9.3" data-path="what-each-section-has.html"><a href="what-each-section-has.html#most-technical"><i class="fa fa-check"></i><b>3.9.3</b> Most technical</a></li>
+<li class="chapter" data-level="3.11.1" data-path="what-each-section-has.html"><a href="what-each-section-has.html#the-basics-1"><i class="fa fa-check"></i><b>3.11.1</b> The basics</a></li>
+<li class="chapter" data-level="3.11.2" data-path="what-each-section-has.html"><a href="what-each-section-has.html#more-technical-1"><i class="fa fa-check"></i><b>3.11.2</b> More technical</a></li>
+<li class="chapter" data-level="3.11.3" data-path="what-each-section-has.html"><a href="what-each-section-has.html#most-technical-1"><i class="fa fa-check"></i><b>3.11.3</b> Most technical</a></li>
 </ul></li>
-<li class="chapter" data-level="3.10" data-path="what-each-section-has.html"><a href="what-each-section-has.html#examples-in-the-wild"><i class="fa fa-check"></i><b>3.10</b> Examples “in the wild”</a></li>
+<li class="chapter" data-level="3.12" data-path="what-each-section-has.html"><a href="what-each-section-has.html#examples-in-the-wild-1"><i class="fa fa-check"></i><b>3.12</b> Examples “in the wild”</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -216,17 +249,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="supervised-learning" class="section level1 unnumbered hasAnchor">
 <h1>Supervised learning<a href="supervised-learning.html#supervised-learning" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="decision-trees-also-known-as-classification-and-regression-trees-cart-conditional-inference-trees" class="section level2 hasAnchor" number="3.8">
-<h2><span class="header-section-number">3.8</span> Decision trees (also known as classification and regression trees [CART], conditional inference trees)<a href="supervised-learning.html#decision-trees-also-known-as-classification-and-regression-trees-cart-conditional-inference-trees" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="general-explanations-and-interpretation" class="section level3 hasAnchor" number="3.8.1">
-<h3><span class="header-section-number">3.8.1</span> General explanations and interpretation<a href="supervised-learning.html#general-explanations-and-interpretation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="decision-trees-also-known-as-classification-and-regression-trees-cart-conditional-inference-trees" class="section level2 hasAnchor" number="3.10">
+<h2><span class="header-section-number">3.10</span> Decision trees (also known as classification and regression trees [CART], conditional inference trees)<a href="supervised-learning.html#decision-trees-also-known-as-classification-and-regression-trees-cart-conditional-inference-trees" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="general-explanations-and-interpretation" class="section level3 hasAnchor" number="3.10.1">
+<h3><span class="header-section-number">3.10.1</span> General explanations and interpretation<a href="supervised-learning.html#general-explanations-and-interpretation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p>Start with <a href="http://www.jstor.org/stable/10.1086/587826">this paper</a> and focus on the CART (Classification and Regression Tree) section mainly.</p></li>
 <li><p><a href="https://stats.stackexchange.com/questions/255150/how-to-interpret-this-decision-tree">A plainer-language explanation of how splits are chosen with a sample dataset on irises and some exerpts from ctree documentation.</a></p></li>
 </ul>
 </div>
-<div id="examples-of-cart-in-the-wild" class="section level3 hasAnchor" number="3.8.2">
-<h3><span class="header-section-number">3.8.2</span> Examples of CART in the wild<a href="supervised-learning.html#examples-of-cart-in-the-wild" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="examples-of-cart-in-the-wild" class="section level3 hasAnchor" number="3.10.2">
+<h3><span class="header-section-number">3.10.2</span> Examples of CART in the wild<a href="supervised-learning.html#examples-of-cart-in-the-wild" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p>These two papers use R’s <code>ctree()</code> from the <code>partykit</code> package</p>
 <ul>
@@ -239,8 +272,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p><a href="https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/1051-0761%282006%29016%5B0687%3AHELMAR%5D2.0.CO%3B2">A different algorithm to run CART: I suggest it because it has good figures and methods section</a></p></li>
 </ul>
 </div>
-<div id="how-and-why-to-run-the-ctree-version-of-cartdecision-trees" class="section level3 hasAnchor" number="3.8.3">
-<h3><span class="header-section-number">3.8.3</span> How and why to run the <code>ctree</code> version of CART/decision trees<a href="supervised-learning.html#how-and-why-to-run-the-ctree-version-of-cartdecision-trees" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="how-and-why-to-run-the-ctree-version-of-cartdecision-trees" class="section level3 hasAnchor" number="3.10.3">
+<h3><span class="header-section-number">3.10.3</span> How and why to run the <code>ctree</code> version of CART/decision trees<a href="supervised-learning.html#how-and-why-to-run-the-ctree-version-of-cartdecision-trees" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p><a href="https://stats.stackexchange.com/questions/12140/conditional-inference-trees-vs-traditional-decision-trees">A short explanation of why ctree is a good general choice to minimize overfitting.</a></p></li>
 <li><p>The <a href="https://cran.r-project.org/web/packages/partykit/vignettes/ctree.pdf">R vignette for the <code>partykit</code> package</a> provides worked examples and code for both categorical responses (classification trees) and numeric responses (regression trees).</p></li>
@@ -258,7 +291,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="principal-components-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="what-each-section-has.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
