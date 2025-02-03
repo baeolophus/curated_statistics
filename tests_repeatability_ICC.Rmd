@@ -23,4 +23,4 @@ The key citations.
 ## Examples "in the wild"
 Citations and what is useful in the paper.
     
-The most updated guideline is @tenhoveUpdatedGuidelinesSelecting2024
+The most updated guideline is [@tenhoveUpdatedGuidelinesSelecting2024]
