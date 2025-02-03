@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.com/rstudio/bookdown-demo.svg?branch=master)](https://travis-ci.com/rstudio/bookdown-demo)
-
 For me the author:
 
-- How to build the page:
-- How to push to github pages (using main/docs as source).
+- How to build the full page: Build tab in Rstudio (builds all pages together).
+- How to push to github pages (using main/docs as source): push, wait for update on github side.
