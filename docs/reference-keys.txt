@@ -21,9 +21,9 @@ explanation
 the-basics
 more-technical
 questions-and-data-types-1
-key-assumptions-1
+key-assumptions-and-limitations
 key-distinctions-among-related-methods
-implementations-and-controversies
+implementation-and-controversies
 most-technical
 examples-in-the-wild
 decision-trees-also-known-as-classification-and-regression-trees-cart-conditional-inference-trees
@@ -34,8 +34,8 @@ explanation-1
 the-basics-1
 more-technical-1
 questions-and-data-types-2
-key-assumptions-2
+key-assumptions-1
 key-distinctions-among-related-methods-1
-implementations-and-controversies-1
+implementations-and-controversies
 most-technical-1
 examples-in-the-wild-1
