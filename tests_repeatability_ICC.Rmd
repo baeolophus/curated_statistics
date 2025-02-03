@@ -1,4 +1,4 @@
-# What each section has {-}
+# Intraclass Correlation Coefficient a.k.a. repeatability {-}
 
 ## Explanation
 ### The basics
