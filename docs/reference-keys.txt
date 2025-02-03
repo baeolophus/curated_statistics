@@ -22,6 +22,8 @@ the-basics
 more-technical
 questions-and-data-types-1
 key-assumptions-and-limitations
+assumptions
+limitations
 key-distinctions-among-related-methods
 implementation-and-controversies
 most-technical

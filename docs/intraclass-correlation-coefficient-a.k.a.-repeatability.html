@@ -253,7 +253,51 @@ div.csl-indent {
 <h2><span class="header-section-number">3.8</span> Explanation<a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#explanation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="the-basics" class="section level3 hasAnchor" number="3.8.1">
 <h3><span class="header-section-number">3.8.1</span> The basics<a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#the-basics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A simple explanation and hopefully figure of what the test does or gets at.</p>
+<p>Repeatability, as measured by the intraclass correlation coefficient (ICC), is a unitless way to see if measurements are consistent. If you measure the same thing more than once, are you going to get a similar answer?</p>
+<p>This is usually calculated by comparing (in some way, methods vary) how much variation there is within a given object/individual measured versus the variation over all measurements of all individuals.</p>
+<p>Here’s an example using SAS sample data <span class="citation">(<a href="#ref-PROCNESTEDVariability"><span>“<span>PROC NESTED</span>: <span>Variability</span> of <span>Calcium Concentration</span> in <span>Turnip Greens</span> :: <span>SAS</span>/<span>STAT</span>(<span>R</span>) 9.2 <span>User</span>’s <span>Guide</span>, <span>Second Edition</span>”</span> n.d.</a>)</span>.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-1" tabindex="-1"></a>   <span class="co"># title &#39;Calcium Concentration in Turnip Leaves&#39;</span></span>
+<span id="cb5-2"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-2" tabindex="-1"></a>   <span class="co">#       &#39;--Nested Random Model&#39;;</span></span>
+<span id="cb5-3"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-3" tabindex="-1"></a>   <span class="co"># title2 &#39;Snedecor and Cochran, &#39;&#39;Statistical Methods&#39;&#39;&#39;</span></span>
+<span id="cb5-4"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-4" tabindex="-1"></a>   <span class="co">#        &#39;, 1976, p. 286&#39;;</span></span>
+<span id="cb5-5"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-5" tabindex="-1"></a>   <span class="co"># data Turnip;</span></span>
+<span id="cb5-6"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-6" tabindex="-1"></a>   <span class="co">#    do Plant=1 to 4;</span></span>
+<span id="cb5-7"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-7" tabindex="-1"></a>   <span class="co">#       do Leaf=1 to 3;</span></span>
+<span id="cb5-8"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-8" tabindex="-1"></a>   <span class="co">#          do Sample=1 to 2;</span></span>
+<span id="cb5-9"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-9" tabindex="-1"></a>   <span class="co">#             input Calcium @@;</span></span>
+<span id="cb5-10"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-10" tabindex="-1"></a>   <span class="co">#             output;</span></span>
+<span id="cb5-11"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-11" tabindex="-1"></a>   <span class="co">#          end;</span></span>
+<span id="cb5-12"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-12" tabindex="-1"></a>   <span class="co">#       end;</span></span>
+<span id="cb5-13"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-13" tabindex="-1"></a>   <span class="co">#    end;</span></span>
+<span id="cb5-14"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-14" tabindex="-1"></a>   <span class="co">#    datalines;</span></span>
+<span id="cb5-15"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-15" tabindex="-1"></a>   <span class="co"># 3.28 3.09 3.52 3.48 2.88 2.80 2.46 2.44</span></span>
+<span id="cb5-16"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-16" tabindex="-1"></a>   <span class="co"># 1.87 1.92 2.19 2.19 2.77 2.66 3.74 3.44</span></span>
+<span id="cb5-17"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-17" tabindex="-1"></a>   <span class="co"># 2.55 2.55 3.78 3.87 4.07 4.12 3.31 3.31</span></span>
+<span id="cb5-18"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-18" tabindex="-1"></a>   <span class="co"># ;</span></span>
+<span id="cb5-19"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-19" tabindex="-1"></a>   <span class="co"># </span></span>
+<span id="cb5-20"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-20" tabindex="-1"></a>   <span class="co"># proc nested data=Turnip;</span></span>
+<span id="cb5-21"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-21" tabindex="-1"></a>   <span class="co">#    classes plant leaf;</span></span>
+<span id="cb5-22"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-22" tabindex="-1"></a>   <span class="co">#    var calcium;</span></span>
+<span id="cb5-23"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-23" tabindex="-1"></a>   <span class="co"># run;</span></span>
+<span id="cb5-24"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-24" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-25" tabindex="-1"></a>Plant <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span></span>
+<span id="cb5-26"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-26" tabindex="-1"></a>Leaf <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span></span>
+<span id="cb5-27"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-27" tabindex="-1"></a>Sample <span class="ot">=</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span></span>
+<span id="cb5-28"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-28" tabindex="-1"></a></span>
+<span id="cb5-29"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-29" tabindex="-1"></a>turnip <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">Sample=</span>Sample, <span class="at">Leaf=</span>Leaf, <span class="at">Plant=</span>Plant)</span>
+<span id="cb5-30"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-30" tabindex="-1"></a></span>
+<span id="cb5-31"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-31" tabindex="-1"></a>turnip<span class="sc">$</span>calcium <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">3.28</span>, <span class="fl">3.09</span>, <span class="fl">3.52</span>, <span class="fl">3.48</span>, <span class="fl">2.88</span>, <span class="fl">2.80</span>, <span class="fl">2.46</span>, <span class="fl">2.44</span>, <span class="fl">1.87</span>, <span class="fl">1.92</span>, <span class="fl">2.19</span>, <span class="fl">2.19</span>, <span class="fl">2.77</span>, <span class="fl">2.66</span>, <span class="fl">3.74</span>, <span class="fl">3.44</span>, <span class="fl">2.55</span>, <span class="fl">2.55</span>, <span class="fl">3.78</span>, <span class="fl">3.87</span>, <span class="fl">4.07</span>, <span class="fl">4.12</span>, <span class="fl">3.31</span>, <span class="fl">3.31</span>)</span>
+<span id="cb5-32"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-32" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-33" tabindex="-1"></a></span>
+<span id="cb5-34"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-34" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb5-35"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-35" tabindex="-1"></a></span>
+<span id="cb5-36"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-36" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> turnip,</span>
+<span id="cb5-37"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-37" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Plant,</span>
+<span id="cb5-38"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-38" tabindex="-1"></a>                     <span class="at">y =</span> calcium,</span>
+<span id="cb5-39"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-39" tabindex="-1"></a>                     <span class="at">color =</span> <span class="fu">as.factor</span>(Leaf),</span>
+<span id="cb5-40"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-40" tabindex="-1"></a>                     <span class="at">shape =</span> <span class="fu">as.factor</span>(Sample))) <span class="sc">+</span></span>
+<span id="cb5-41"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#cb5-41" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="statistics_for_scared_people_files/figure-html/ICC_concept_graph-1.png" width="672" /></p>
 </div>
 <div id="more-technical" class="section level3 hasAnchor" number="3.8.2">
 <h3><span class="header-section-number">3.8.2</span> More technical<a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#more-technical" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -263,9 +307,20 @@ div.csl-indent {
 </div>
 <div id="key-assumptions-and-limitations" class="section level4 hasAnchor" number="3.8.2.2">
 <h4><span class="header-section-number">3.8.2.2</span> Key assumptions and limitations<a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#key-assumptions-and-limitations" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="assumptions" class="section level5 hasAnchor" number="3.8.2.2.1">
+<h5><span class="header-section-number">3.8.2.2.1</span> Assumptions<a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>This is how to know if you can use the method.</p>
-<p>Limitations are study design though
-Thresholds listed on the wikipedia page, but neither provides justifications for their thresholds.</p>
+<ul>
+<li>Most assume Gaussian/normal data, but Nakagaw and Schielzeth <span class="citation">(<a href="#ref-nakagawaRepeatabilityGaussianNonGaussian2010a">2010</a>)</span> extend to non-normal data.</li>
+</ul>
+</div>
+<div id="limitations" class="section level5 hasAnchor" number="3.8.2.2.2">
+<h5><span class="header-section-number">3.8.2.2.2</span> Limitations<a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#limitations" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>It’s important to pick the right ICC calculation for your study design, though at least one paper says you can do all three <span class="citation">(<a href="#ref-liljequistIntraclassCorrelationDiscussion2019">Liljequist, Elfving, and Skavberg Roaldsen 2019</a>)</span> and compare.</p>
+<p>Bailey and Byrnes <span class="citation">(<a href="#ref-baileyNewOldMethod1990">1990</a>)</span> suggest how to calculate a suitable sample size for studies based on the measurement error found.</p>
+<p>Two thresholds are listed on the wikipedia page <span class="citation">(<a href="#ref-IntraclassCorrelation2024"><span>“Intraclass Correlation”</span> 2024</a>)</span>, but neither paper provides justifications for their thresholds. (One study <span class="citation">(<a href="#ref-kooGuidelineSelectingReporting2016">Koo and Li 2016</a>)</span> has an erratum due to a key equation being incorrect in the feature comparison table <span class="citation">(<a href="#ref-ErratumGuidelineSelecting2017"><span>“Erratum to <span>‘<span>A Guideline</span> of <span>Selecting</span> and <span>Reporting Intraclass Correlation Coefficients</span> for <span>Reliability Research</span>’</span> [<span>J Chiropr Med</span> 2016;15(2):155-163]”</span> 2017</a>)</span>.)</p>
+<p>More realistically, you need to know what it actually means for your data and concepts being test <span class="citation">(<a href="#ref-wilsonHowShouldWe2018">Wilson 2018</a>)</span>. There’s nothing magic about any particular threshold.</p>
+</div>
 </div>
 <div id="key-distinctions-among-related-methods" class="section level4 hasAnchor" number="3.8.2.3">
 <h4><span class="header-section-number">3.8.2.3</span> Key distinctions among related methods<a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#key-distinctions-among-related-methods" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -291,17 +346,38 @@ Thresholds listed on the wikipedia page, but neither provides justifications for
 </div>
 <h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-baileyNewOldMethod1990" class="csl-entry">
+Bailey, Robert C., and Janice Byrnes. 1990. <span>“A New, Old Method for Assessing Measurement Error in Both Univariate and Multivariate Morphometric Studies.”</span> <em>Systematic Biology</em> 39 (2): 124–30. <a href="https://doi.org/10.2307/2992450">https://doi.org/10.2307/2992450</a>.
+</div>
 <div id="ref-curryRepeatabilityIntraclassCorrelation2016" class="csl-entry">
-Curry, Claire M. 2016. <span>“Repeatability, Intraclass Correlation Coefficient, and Measurement Error in <span>R</span> and <span>SAS</span>.”</span> <em>Computing Bird</em>.
+Curry, Claire M. 2016. <span>“Repeatability, Intraclass Correlation Coefficient, and Measurement Error in <span>R</span> and <span>SAS</span>.”</span> <em>Computing Bird</em>. http://www.cmcurry.com/2016/01/repeatability-intraclass-correlation.html.
+</div>
+<div id="ref-ErratumGuidelineSelecting2017" class="csl-entry">
+<span>“Erratum to <span>‘<span>A Guideline</span> of <span>Selecting</span> and <span>Reporting Intraclass Correlation Coefficients</span> for <span>Reliability Research</span>’</span> [<span>J Chiropr Med</span> 2016;15(2):155-163].”</span> 2017. <em>Journal of Chiropractic Medicine</em> 16 (4): 346. <a href="https://doi.org/10.1016/j.jcm.2017.10.001">https://doi.org/10.1016/j.jcm.2017.10.001</a>.
+</div>
+<div id="ref-IntraclassCorrelation2024" class="csl-entry">
+<span>“Intraclass Correlation.”</span> 2024. <em>Wikipedia</em>, October.
+</div>
+<div id="ref-kooGuidelineSelectingReporting2016" class="csl-entry">
+Koo, Terry K., and Mae Y. Li. 2016. <span>“A <span>Guideline</span> of <span>Selecting</span> and <span>Reporting Intraclass Correlation Coefficients</span> for <span>Reliability Research</span>.”</span> <em>Journal of Chiropractic Medicine</em> 15 (2): 155–63. <a href="https://doi.org/10.1016/j.jcm.2016.02.012">https://doi.org/10.1016/j.jcm.2016.02.012</a>.
 </div>
 <div id="ref-liljequistIntraclassCorrelationDiscussion2019" class="csl-entry">
 Liljequist, David, Britt Elfving, and Kirsti Skavberg Roaldsen. 2019. <span>“Intraclass Correlation – <span>A</span> Discussion and Demonstration of Basic Features.”</span> <em>PLoS ONE</em> 14 (7): e0219854. <a href="https://doi.org/10.1371/journal.pone.0219854">https://doi.org/10.1371/journal.pone.0219854</a>.
+</div>
+<div id="ref-nakagawaRepeatabilityGaussianNonGaussian2010a" class="csl-entry">
+Nakagawa, Shinichi, and Holger Schielzeth. 2010. <span>“Repeatability for <span>Gaussian</span> and Non-<span>Gaussian</span> Data: A Practical Guide for Biologists.”</span> <em>Biological Reviews of the Cambridge Philosophical Society</em> 85 (4): 935–56. <a href="https://doi.org/10.1111/j.1469-185X.2010.00141.x">https://doi.org/10.1111/j.1469-185X.2010.00141.x</a>.
+</div>
+<div id="ref-PROCNESTEDVariability" class="csl-entry">
+<span>“<span>PROC NESTED</span>: <span>Variability</span> of <span>Calcium Concentration</span> in <span>Turnip Greens</span> :: <span>SAS</span>/<span>STAT</span>(<span>R</span>) 9.2 <span>User</span>’s <span>Guide</span>, <span>Second Edition</span>.”</span> n.d. https://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#statug_nested_sect020.htm. Accessed February 3, 2025.
 </div>
 <div id="ref-tenhoveUpdatedGuidelinesSelecting2024" class="csl-entry">
 Ten Hove, Debby, Terrence D. Jorgensen, and L. Andries Van Der Ark. 2024. <span>“Updated Guidelines on Selecting an Intraclass Correlation Coefficient for Interrater Reliability, with Applications to Incomplete Observational Designs.”</span> <em>Psychological Methods</em> 29 (5): 967–79. <a href="https://doi.org/10.1037/met0000516">https://doi.org/10.1037/met0000516</a>.
 </div>
 <div id="ref-vispoelApplicationsGeneralizabilityTheory2018" class="csl-entry">
 Vispoel, Walter P., Carrie A. Morris, and Murat Kilinc. 2018. <span>“Applications of Generalizability Theory and Their Relations to Classical Test Theory and Structural Equation Modeling.”</span> <em>Psychological Methods</em> 23 (1): 1–26. <a href="https://doi.org/10.1037/met0000107">https://doi.org/10.1037/met0000107</a>.
+</div>
+<div id="ref-wilsonHowShouldWe2018" class="csl-entry">
+Wilson, Alastair J. 2018. <span>“How Should We Interpret Estimates of Individual Repeatability?”</span> <em>Evolution Letters</em> 2 (1): 4–8. <a href="https://doi.org/10.1002/evl3.40">https://doi.org/10.1002/evl3.40</a>.
 </div>
 </div>
             </section>
