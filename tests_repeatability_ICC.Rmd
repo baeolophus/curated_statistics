@@ -9,13 +9,20 @@ A simple explanation and hopefully figure of what the test does or gets at.
 #### Questions and data types
 Example problem structures and types of data you need.
 
-#### Key assumptions
+#### Key assumptions and limitations
 This is how to know if you can use the method.
 
-#### Key distinctions among related methods
-Within and among methods - related?
+Limitations are study design though 
+Thresholds listed on the wikipedia page, but neither provides justifications for their thresholds.
 
-#### Implementations and controversies
+#### Key distinctions among related methods
+"Generalizability theory" ("G-Theory") is related to "classic test theory" which appears to contain repeatability and ICCs [@vispoelApplicationsGeneralizabilityTheory2018].This seems to provide a broader range of indices of how reliable measurements are, but may not be necessary for simple applications.
+
+#### Implementation and controversies
+[@liljequistIntraclassCorrelationDiscussion2019] claim it doesn't matter which ICC method you use, and that if you use all three main methods you can use any differences to suggest what type of bias you may have in measurements.
+
+[@curryRepeatabilityIntraclassCorrelation2016] describe how to implement in R and SAS.
+
 
 ### Most technical
 The key citations.
