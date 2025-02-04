@@ -66,7 +66,7 @@ Example problem structures and types of data you need.
 ##### Assumptions
 This is how to know if you can use the method.
 
-- Most assume Gaussian/normal data, but Nakagaw and Schielzeth [-@nakagawaRepeatabilityGaussianNonGaussian2010a] extend to non-normal data.
+- Most assume Gaussian/normal data, but Nakagawa and Schielzeth [-@nakagawaRepeatabilityGaussianNonGaussian2010a] extend to non-normal data.
 
 ##### Limitations
 It's important to pick the right ICC calculation for your study design, though at least one paper says you can do all three [@liljequistIntraclassCorrelationDiscussion2019] and compare.
@@ -81,7 +81,12 @@ More realistically, you need to know what it actually means for your data and co
 "Generalizability theory" ("G-Theory") is related to "classic test theory" which appears to contain repeatability and ICCs [@vispoelApplicationsGeneralizabilityTheory2018].This seems to provide a broader range of indices of how reliable measurements are, but may not be necessary for simple applications.
 
 #### Implementation and controversies
+
+##### Choosing your ICC calculation
 [@liljequistIntraclassCorrelationDiscussion2019] claim it doesn't matter which ICC method you use, and that if you use all three main methods you can use any differences to suggest what type of bias you may have in measurements.
+
+Lots of papers summarize how to use it (in Zotero library, working to figure out which ones best.)  Most recent one [@tenhoveUpdatedGuidelinesSelecting2024] isn't in ResearchRabbit.ai to easy visualize which papers cite the same papers.  I have submitted a help request to them and a record change to OA for OpenAlex.org (which showed it as closed).
+    
 
 [@curryRepeatabilityIntraclassCorrelation2016] describe how to implement in R and SAS.
 
@@ -91,5 +96,6 @@ The key citations.
 
 ## Examples "in the wild"
 Citations and what is useful in the paper.
-    
+
+
 The most updated guideline is [@tenhoveUpdatedGuidelinesSelecting2024]

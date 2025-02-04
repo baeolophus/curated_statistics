@@ -26,6 +26,7 @@ assumptions
 limitations
 key-distinctions-among-related-methods
 implementation-and-controversies
+choosing-your-icc-calculation
 most-technical
 examples-in-the-wild
 decision-trees-also-known-as-classification-and-regression-trees-cart-conditional-inference-trees
