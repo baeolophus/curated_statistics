@@ -1,0 +1,48 @@
+# Explaining Odds Ratios {-}
+
+## Explanation
+### The basics
+In some regression models (examples here are logistic and Poisson regression), instead of a beta coefficient that can be interpreted as-is, you are given log odds [@dwinAnswerHowInterpret2011].  Those must be converted to odds ratios, or their Poisson similar cousin relative risk/relative odds.  You can present both the original log odds estimate plus the odds ratio / relative risk in your results table.
+
+Basic explanation [@FAQHowInterpret] for logistic regression that walks from probabilities to odds to log odds to dds ratios.  has examples for a variety of types of predictor variables.
+
+
+
+Additionally: 
+
+Slides 20-24: https://clas.ucdenver.edu/marcelo-perraillon/content/marginal-effects-lisbon
+“FAQ: How Do I Interpret Odds Ratios in Logistic Regression?” n.d. Accessed May 20, 2022. https://stats.oarc.ucla.edu/other/mult-pkg/faq/general/faq-how-do-i-interpret-odds-ratios-in-logistic-regression/.
+Section 6.1: https://clas.ucdenver.edu/marcelo-perraillon/sites/default/files/attached-files/plh_chapter_6_marginal_effects_jan_2023.pdf
+
+
+### More technical
+
+#### Questions and data types
+Example problem structures and types of data you need.
+
+- The whole analysis page [@PoissonRegressionData], specifically look at the secion called "Poisson regression" about halfway down the page and the second bullet point for interpreting coefficients specifically.
+
+- The whole analysis page [@LogitRegressionData], section where it will talk about coefficients.
+
+- [@hector9GeneralizedLinear2015] has a good walkthrough of conversion on pp 130-134 for binary/logistic and 137-138 for Poisson data.
+
+- Box 13.2 in Quinn and Keough also has a good work-through (logistic regression, but as long as both use the default log link the interpretation is similar).
+
+#### Key assumptions
+Did you run a GLM with a log link or logit link?  Then yes.
+
+#### Key distinctions among related methods
+Odds ratio for logistic vs relative risk for Poisson [@dwinAnswerHowInterpret2011].
+There is a good summary chapter about odds ratios vs log odds vs other related confusing terms.
+
+#### Implementations and controversies
+
+Very helpful to plot your data [@cameronAnswerHowCan2021] so you are interpreting in the correct direction, as for any type of regression.
+
+### Most technical
+The key citations.
+
+## Examples "in the wild"
+Citations and what is useful in the paper.
+    
+
