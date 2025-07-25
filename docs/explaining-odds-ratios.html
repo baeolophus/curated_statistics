@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 What is your goal? | Curated Statistics</title>
+  <title>Explaining Odds Ratios | Curated Statistics</title>
   <meta name="description" content="provides supplementary explanations for Statistics Helper questionaire" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 What is your goal? | Curated Statistics" />
+  <meta property="og:title" content="Explaining Odds Ratios | Curated Statistics" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="provides supplementary explanations for Statistics Helper questionaire" />
   <meta name="github-repo" content="baeolophus/curated_statistics" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 What is your goal? | Curated Statistics" />
+  <meta name="twitter:title" content="Explaining Odds Ratios | Curated Statistics" />
   
   <meta name="twitter:description" content="provides supplementary explanations for Statistics Helper questionaire" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="types-of-resources.html"/>
+<link rel="prev" href="how-to-use-this-section.html"/>
+<link rel="next" href="principal-components-analysis.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -257,29 +257,75 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="what-is-your-goal" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> What is your goal?<a href="what-is-your-goal.html#what-is-your-goal" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="exploratory-or-hypothesis-generation" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Exploratory or hypothesis generation<a href="what-is-your-goal.html#exploratory-or-hypothesis-generation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="explaining-odds-ratios" class="section level1 unnumbered hasAnchor">
+<h1>Explaining Odds Ratios<a href="explaining-odds-ratios.html#explaining-odds-ratios" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="explanation" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> Explanation<a href="explaining-odds-ratios.html#explanation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="the-basics" class="section level3 hasAnchor" number="3.6.1">
+<h3><span class="header-section-number">3.6.1</span> The basics<a href="explaining-odds-ratios.html#the-basics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In some regression models (examples here are logistic and Poisson regression), instead of a beta coefficient that can be interpreted as-is, you are given log odds <span class="citation">(<a href="#ref-dwinAnswerHowInterpret2011">DWin 2011</a>)</span>. Those must be converted to odds ratios, or their Poisson similar cousin relative risk/relative odds. You can present both the original log odds estimate plus the odds ratio / relative risk in your results table.</p>
+<p>Basic explanation <span class="citation">(<a href="#ref-FAQHowInterpret"><span>“<span>FAQ</span>: <span>How</span> Do <span>I</span> Interpret Odds Ratios in Logistic Regression?”</span> n.d.</a>)</span> for logistic regression that walks from probabilities to odds to log odds to dds ratios. has examples for a variety of types of predictor variables.</p>
+<p>Additionally:</p>
+<p>Slides 20-24: <a href="https://clas.ucdenver.edu/marcelo-perraillon/content/marginal-effects-lisbon" class="uri">https://clas.ucdenver.edu/marcelo-perraillon/content/marginal-effects-lisbon</a>
+“FAQ: How Do I Interpret Odds Ratios in Logistic Regression?” n.d. Accessed May 20, 2022. <a href="https://stats.oarc.ucla.edu/other/mult-pkg/faq/general/faq-how-do-i-interpret-odds-ratios-in-logistic-regression/" class="uri">https://stats.oarc.ucla.edu/other/mult-pkg/faq/general/faq-how-do-i-interpret-odds-ratios-in-logistic-regression/</a>.
+Section 6.1: <a href="https://clas.ucdenver.edu/marcelo-perraillon/sites/default/files/attached-files/plh_chapter_6_marginal_effects_jan_2023.pdf" class="uri">https://clas.ucdenver.edu/marcelo-perraillon/sites/default/files/attached-files/plh_chapter_6_marginal_effects_jan_2023.pdf</a></p>
 </div>
-<div id="inferential-or-hypothesis-testing-are-things-different" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Inferential or hypothesis testing “Are things different”<a href="what-is-your-goal.html#inferential-or-hypothesis-testing-are-things-different" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This is a hypothesis, not a description. Description can highlight, but doesn’t test what’s different. Descriptions can still have a bias (mean vs median vs range all show different things descriptively, PCA problems). Doesn’t mean it’s an experiment.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="what-is-your-goal.html#cb1-1" tabindex="-1"></a><span class="fu">summary</span>(cars)</span></code></pre></div>
-<pre><code>##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</code></pre>
+<div id="more-technical" class="section level3 hasAnchor" number="3.6.2">
+<h3><span class="header-section-number">3.6.2</span> More technical<a href="explaining-odds-ratios.html#more-technical" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="questions-and-data-types" class="section level4 hasAnchor" number="3.6.2.1">
+<h4><span class="header-section-number">3.6.2.1</span> Questions and data types<a href="explaining-odds-ratios.html#questions-and-data-types" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Example problem structures and types of data you need.</p>
+<ul>
+<li><p>The whole analysis page <span class="citation">(<a href="#ref-PoissonRegressionData"><span>“Poisson <span>Regression</span> | <span>R Data Analysis Examples</span>”</span> n.d.</a>)</span>, specifically look at the secion called “Poisson regression” about halfway down the page and the second bullet point for interpreting coefficients specifically.</p></li>
+<li><p>The whole analysis page <span class="citation">(<a href="#ref-LogitRegressionData"><span>“Logit <span>Regression</span> | <span>R Data Analysis Examples</span>”</span> n.d.</a>)</span>, section where it will talk about coefficients.</p></li>
+<li><p><span class="citation">(<a href="#ref-hector9GeneralizedLinear2015">Hector 2015</a>)</span> has a good walkthrough of conversion on pp 130-134 for binary/logistic and 137-138 for Poisson data.</p></li>
+<li><p>Box 13.2 in Quinn and Keough also has a good work-through (logistic regression, but as long as both use the default log link the interpretation is similar).</p></li>
+</ul>
 </div>
-<div id="physical-or-mechanistic-predictions---you-can-only-statistics-them-away-sometimes" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> Physical or mechanistic predictions - you can only statistics them away sometimes<a href="what-is-your-goal.html#physical-or-mechanistic-predictions---you-can-only-statistics-them-away-sometimes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="curated_statistics_files/figure-html/pressure-1.png" width="672" /></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
+<div id="key-assumptions" class="section level4 hasAnchor" number="3.6.2.2">
+<h4><span class="header-section-number">3.6.2.2</span> Key assumptions<a href="explaining-odds-ratios.html#key-assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Did you run a GLM with a log link or logit link? Then yes.</p>
+</div>
+<div id="key-distinctions-among-related-methods" class="section level4 hasAnchor" number="3.6.2.3">
+<h4><span class="header-section-number">3.6.2.3</span> Key distinctions among related methods<a href="explaining-odds-ratios.html#key-distinctions-among-related-methods" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Odds ratio for logistic vs relative risk for Poisson <span class="citation">(<a href="#ref-dwinAnswerHowInterpret2011">DWin 2011</a>)</span>.
+There is a good summary chapter about odds ratios vs log odds vs other related confusing terms.</p>
+</div>
+<div id="implementations-and-controversies" class="section level4 hasAnchor" number="3.6.2.4">
+<h4><span class="header-section-number">3.6.2.4</span> Implementations and controversies<a href="explaining-odds-ratios.html#implementations-and-controversies" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Very helpful to plot your data <span class="citation">(<a href="#ref-cameronAnswerHowCan2021">Cameron 2021</a>)</span> so you are interpreting in the correct direction, as for any type of regression.</p>
+</div>
+</div>
+<div id="most-technical" class="section level3 hasAnchor" number="3.6.3">
+<h3><span class="header-section-number">3.6.3</span> Most technical<a href="explaining-odds-ratios.html#most-technical" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The key citations.</p>
+</div>
+</div>
+<div id="examples-in-the-wild" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> Examples “in the wild”<a href="explaining-odds-ratios.html#examples-in-the-wild" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Citations and what is useful in the paper.</p>
 
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-cameronAnswerHowCan2021" class="csl-entry">
+Cameron, Allan. 2021. <span>“Answer to "<span>How</span> Can <span>I</span> Create a Ggplot with a Regression Line Based on the Predicted Values of a Glm?".”</span> Stack Overflow. November 2, 2021. <a href="https://stackoverflow.com/a/69811892">https://stackoverflow.com/a/69811892</a>.
+</div>
+<div id="ref-dwinAnswerHowInterpret2011" class="csl-entry">
+DWin. 2011. <span>“Answer to "<span>How</span> to Interpret Coefficients in a <span>Poisson</span> Regression?".”</span> Cross Validated. May 21, 2011. <a href="https://stats.stackexchange.com/a/11097">https://stats.stackexchange.com/a/11097</a>.
+</div>
+<div id="ref-FAQHowInterpret" class="csl-entry">
+<span>“<span>FAQ</span>: <span>How</span> Do <span>I</span> Interpret Odds Ratios in Logistic Regression?”</span> n.d. Accessed May 20, 2022. <a href="https://stats.oarc.ucla.edu/other/mult-pkg/faq/general/faq-how-do-i-interpret-odds-ratios-in-logistic-regression/">https://stats.oarc.ucla.edu/other/mult-pkg/faq/general/faq-how-do-i-interpret-odds-ratios-in-logistic-regression/</a>.
+</div>
+<div id="ref-hector9GeneralizedLinear2015" class="csl-entry">
+Hector, Andy. 2015. <span>“9: <span>Generalized Linear Models</span> for <span>Data</span> with <span>Non-Normal Distributions</span>.”</span> In <em>New Statistics with <span>R</span>: An Introduction for Biologists</em>, 1st ed., 121–40. Oxford (GB): Oxford university press.
+</div>
+<div id="ref-LogitRegressionData" class="csl-entry">
+<span>“Logit <span>Regression</span> | <span>R Data Analysis Examples</span>.”</span> n.d. Accessed May 20, 2022. <a href="https://stats.oarc.ucla.edu/r/dae/logit-regression/">https://stats.oarc.ucla.edu/r/dae/logit-regression/</a>.
+</div>
+<div id="ref-PoissonRegressionData" class="csl-entry">
+<span>“Poisson <span>Regression</span> | <span>R Data Analysis Examples</span>.”</span> n.d. Accessed July 25, 2025. <a href="https://stats.oarc.ucla.edu/r/dae/poisson-regression/">https://stats.oarc.ucla.edu/r/dae/poisson-regression/</a>.
 </div>
 </div>
             </section>
@@ -287,8 +333,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="types-of-resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="how-to-use-this-section.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="principal-components-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -319,7 +365,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/rstudio/bookdown-demo/edit/master/01-goals.Rmd",
+    "link": "https://github.com/rstudio/bookdown-demo/edit/master/tests_odds_ratios.Rmd",
     "text": "Edit"
   },
   "history": {

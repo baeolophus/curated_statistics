@@ -1,5 +1,5 @@
 --- 
-title: "Statistics for Scared People"
+title: "Curated Statistics"
 author: "C.M. Curry"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -8,7 +8,7 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: baeolophus/statistics_for_scared_people
+github-repo: baeolophus/curated_statistics
 description: "provides supplementary explanations for Statistics Helper questionaire"
 ---
 
