@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Curated Statistics</title>
+  <title>Model selection as an approach | Curated Statistics</title>
   <meta name="description" content="provides supplementary explanations for Statistics Helper questionaire" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Curated Statistics" />
+  <meta property="og:title" content="Model selection as an approach | Curated Statistics" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="provides supplementary explanations for Statistics Helper questionaire" />
   <meta name="github-repo" content="baeolophus/curated_statistics" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Curated Statistics" />
+  <meta name="twitter:title" content="Model selection as an approach | Curated Statistics" />
   
   <meta name="twitter:description" content="provides supplementary explanations for Statistics Helper questionaire" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="what-is-your-goal.html"/>
+<link rel="prev" href="how-to-use-this-section.html"/>
+<link rel="next" href="explaining-odds-ratios.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -268,25 +268,125 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Curated Statistics</h1>
-<p class="author"><em>C.M. Curry</em></p>
-<p class="date"><em>2026-05-15</em></p>
+<div id="model-selection-as-an-approach" class="section level1 unnumbered hasAnchor">
+<h1>Model selection as an approach<a href="model-selection-as-an-approach.html#model-selection-as-an-approach" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="explanation" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> Explanation<a href="model-selection-as-an-approach.html#explanation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="the-basics" class="section level3 hasAnchor" number="3.6.1">
+<h3><span class="header-section-number">3.6.1</span> The basics<a href="model-selection-as-an-approach.html#the-basics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Model selection looks at suites of variables in otherwise comparable models.</p>
+<ul>
+<li>The models are compared by some number (such as AIC, AICc, or BIC, defined later) and ranked. The “best” (more accurately the highest-ranked) models are the best of the set, not the best in all the possible universe. You might have not added all the needed variables to explain your data</li>
+<li>This approach can be modified with “model averaging” that allows you to combine multiple of the highest-ranked models.</li>
+</ul>
+<p>Read chapter 8 of the foundational book first to see if the approach is right for you <span class="citation">(<a href="#ref-burnhamModelSelectionMultimodel2008">Kenneth P. Burnham and Anderson 2008</a>)</span>.</p>
 </div>
-<div id="who-is-this-book-for" class="section level1 unnumbered hasAnchor">
-<h1>Who is this book for?<a href="index.html#who-is-this-book-for" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="more-technical" class="section level3 hasAnchor" number="3.6.2">
+<h3><span class="header-section-number">3.6.2</span> More technical<a href="model-selection-as-an-approach.html#more-technical" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="questions-and-data-types" class="section level4 hasAnchor" number="3.6.2.1">
+<h4><span class="header-section-number">3.6.2.1</span> Questions and data types<a href="model-selection-as-an-approach.html#questions-and-data-types" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Any generalized linear model (linear regression, generalized linear models, ANOVA, ANCOVA, and more) that generates AICs can work</li>
+</ul>
+</div>
+<div id="key-assumptions" class="section level4 hasAnchor" number="3.6.2.2">
+<h4><span class="header-section-number">3.6.2.2</span> Key assumptions<a href="model-selection-as-an-approach.html#key-assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>You provide selected, well-thought-out hypotheses and compare them
+<ul>
+<li>This is best suited for comparing suites of variables instead of all possible combinations</li>
+<li>Any higher-ranked models may not be the best model, only the best model you’ve tested</li>
+</ul></li>
+<li>You give up significance (p-values) with this approach
+<ul>
+<li>To find out how of the model explains your data, you can look at weights</li>
+<li>You don’t get to interpret the coefficients by significance like you do with frequentist statistics</li>
+</ul></li>
+</ul>
+</div>
+<div id="key-distinctions-among-related-methods" class="section level4 hasAnchor" number="3.6.2.3">
+<h4><span class="header-section-number">3.6.2.3</span> Key distinctions among related methods<a href="model-selection-as-an-approach.html#key-distinctions-among-related-methods" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>This is a suggested alternative to stepwise selection <span class="citation">(<a href="#ref-hegyiUsingInformationTheory2011">Hegyi and Garamszegi 2011</a>)</span>, which is strongly advised against <span class="citation">(<a href="#ref-mundryStepwiseModelFitting2009">Mundry and Nunn 2009</a>; <a href="#ref-smithStepAwayStepwise2018">Smith 2018</a>)</span></li>
+<li>Classification and regression trees (also called decision trees) chose from all the variables together and suggest interactions <span class="citation">(<a href="#ref-oldenMachineLearningMethods2008">Olden, Lawler, and Poff 2008</a>)</span>; for model selection you propose the models’ interactions based on prior knowledge or hypotheses about how the data were formed</li>
+</ul>
+</div>
+<div id="common-terminology-confusions" class="section level4 hasAnchor" number="3.6.2.4">
+<h4><span class="header-section-number">3.6.2.4</span> Common terminology confusions<a href="model-selection-as-an-approach.html#common-terminology-confusions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p>Some papers will describe the approach as “information-theoretic” <span class="citation">(<a href="#ref-andersonAvoidingPitfallsWhen2002">Anderson and Burnham 2002</a>)</span> and others generally refer to the methods as “model selection” <span class="citation">(<a href="#ref-burnhamModelSelectionMultimodel2008">Kenneth P. Burnham and Anderson 2008</a>)</span>. Model selection is a type of information-theoretic approach, but information-theoretic approach may be used as shorthand for it in casual writing or conversation.</p></li>
+<li><p>Model averaging is a type of multi-model inference but the terms are sometimes used interchangeably in more casual writing or conversation.</p></li>
+</ul>
+</div>
+<div id="cite-these" class="section level4 hasAnchor" number="3.6.2.5">
+<h4><span class="header-section-number">3.6.2.5</span> Cite these<a href="model-selection-as-an-approach.html#cite-these" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="citation">Kenneth P. Burnham and Anderson (<a href="#ref-burnhamModelSelectionMultimodel2008">2008</a>)</span> is the classic baseline. The summary chapter (8) is a good starting place to understand if the approach is right for your data and problem. If you plan to use the models, then go ahead and read the whole book followed by the implementation papers above.</p>
+</div>
+<div id="implementations-and-controversies" class="section level4 hasAnchor" number="3.6.2.6">
+<h4><span class="header-section-number">3.6.2.6</span> Implementations and controversies<a href="model-selection-as-an-approach.html#implementations-and-controversies" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p><code>AICcmodavg</code> R package has a vignette with examples and details <span class="citation">(<a href="#ref-mazerolleModelSelectionMultimodel2023">Mazerolle 2023</a>)</span>. Open software.</p></li>
+<li><p>Basic difficulties are covered in <span class="citation">Anderson and Burnham (<a href="#ref-andersonAvoidingPitfallsWhen2002">2002</a>)</span>.</p></li>
+<li><p><span class="citation">Kenneth P. Burnham, Anderson, and Huyvaert (<a href="#ref-burnhamAICModelSelection2011">2011</a>)</span> provides a basic summary as well as how to use multi-model inference (also called model averaging).</p></li>
+<li><p><span class="citation">Harrison et al. (<a href="#ref-harrisonBriefIntroductionMixed2018a">2018</a>)</span> covers multi-model inference as well as using mixed models as the base models to compare. Open access.</p></li>
+<li><p>Model averaging has some controversies about how to implement correctly <span class="citation">(<a href="#ref-cadeModelAveragingMuddled2015">Cade 2015</a>)</span>.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="examples-in-the-wild" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> Examples “in the wild”<a href="model-selection-as-an-approach.html#examples-in-the-wild" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Citations and what is useful in the paper. To be found.</p>
+</div>
+<div id="reporting-results" class="section level2 hasAnchor" number="3.8">
+<h2><span class="header-section-number">3.8</span> Reporting results<a href="model-selection-as-an-approach.html#reporting-results" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="citation">Anderson et al. (<a href="#ref-andersonSuggestionsPresentingResults2001">2001</a>)</span> compares how to present data analyses of typical frequentist (p-value) analyses as well as information-theoretic (model selection) and Bayesian results. The paper mainly focuses on the advantages and ways to present the methods and analyses (results) for model selection. They strongly advise not mixing frequentist (p-value and test statistic reporting) and information-theoretic (model selection) results.</p>
 
 </div>
-
-
-
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-andersonAvoidingPitfallsWhen2002" class="csl-entry">
+Anderson, David R., and Kenneth P Burnham. 2002. <span>“Avoiding Pitfalls When Using Information-Theoretic Methods.”</span> <em>Journal of Wildlife Management</em> 66 (3): 912–18. <a href="https://doi.org/10.2307/3803155">https://doi.org/10.2307/3803155</a>.
+</div>
+<div id="ref-andersonSuggestionsPresentingResults2001" class="csl-entry">
+Anderson, David R., William A. Link, Douglas H. Johnson, and Kenneth P. Burnham. 2001. <span>“Suggestions for Presenting the Results of Data Analyses.”</span> <em>The Journal of Wildlife Management</em> 65 (3): 373. <a href="https://doi.org/10.2307/3803088">https://doi.org/10.2307/3803088</a>.
+</div>
+<div id="ref-burnhamAICModelSelection2011" class="csl-entry">
+Burnham, Kenneth P., David R. Anderson, and Kathryn P. Huyvaert. 2011. <span>“<span>AIC</span> Model Selection and Multimodel Inference in Behavioral Ecology: Some Background, Observations, and Comparisons.”</span> <em>Behavioral Ecology and Sociobiology</em> 65 (1): 23–35. <a href="https://doi.org/10.1007/s00265-010-1029-6">https://doi.org/10.1007/s00265-010-1029-6</a>.
+</div>
+<div id="ref-burnhamModelSelectionMultimodel2008" class="csl-entry">
+Burnham, Kenneth P, and David Raymond Anderson. 2008. <em>Model Selection and Multimodel Inference: A Practical Information-Theoretic Approach</em>. New York, NY [u.a.]: Springer.
+</div>
+<div id="ref-cadeModelAveragingMuddled2015" class="csl-entry">
+Cade, Brian S. 2015. <span>“Model Averaging and Muddled Multimodel Inferences.”</span> <em>Ecology</em> 96 (9): 2370–82. <a href="https://doi.org/10.1890/14-1639.1">https://doi.org/10.1890/14-1639.1</a>.
+</div>
+<div id="ref-harrisonBriefIntroductionMixed2018a" class="csl-entry">
+Harrison, Xavier A., Lynda Donaldson, Maria Eugenia Correa-Cano, Julian Evans, David N. Fisher, Cecily E. D. Goodwin, Beth S. Robinson, David J. Hodgson, and Richard Inger. 2018. <span>“A Brief Introduction to Mixed Effects Modelling and Multi-Model Inference in Ecology.”</span> <em>PeerJ</em> 6 (May): e4794. <a href="https://doi.org/10.7717/peerj.4794">https://doi.org/10.7717/peerj.4794</a>.
+</div>
+<div id="ref-hegyiUsingInformationTheory2011" class="csl-entry">
+Hegyi, Gergely, and László Zsolt Garamszegi. 2011. <span>“Using Information Theory as a Substitute for Stepwise Regression in Ecology and Behavior.”</span> <em>Behavioral Ecology and Sociobiology</em> 65 (1): 69–76. <a href="https://doi.org/10.1007/s00265-010-1036-7">https://doi.org/10.1007/s00265-010-1036-7</a>.
+</div>
+<div id="ref-mazerolleModelSelectionMultimodel2023" class="csl-entry">
+Mazerolle, Marc J. 2023. <span>“Model Selection and Multimodel Inference Using the ‘<span>AICcmodavg</span>‘ Package.”</span> CRAN. <a href="https://cran.r-project.org/web/packages/AICcmodavg/vignettes/AICcmodavg.pdf">https://cran.r-project.org/web/packages/AICcmodavg/vignettes/AICcmodavg.pdf</a>.
+</div>
+<div id="ref-mundryStepwiseModelFitting2009" class="csl-entry">
+Mundry, Roger, and Charles L. Nunn. 2009. <span>“Stepwise <span>Model Fitting</span> and <span>Statistical Inference</span>: <span>Turning Noise</span> into <span>Signal Pollution</span>.”</span> <em>American Naturalist</em> 173 (1): 119–23. <a href="https://doi.org/10.1086/593303">https://doi.org/10.1086/593303</a>.
+</div>
+<div id="ref-oldenMachineLearningMethods2008" class="csl-entry">
+Olden, Julian D., Joshua J. Lawler, and N. LeRoy Poff. 2008. <span>“Machine Learning Methods Without Tears: A Primer for Ecologists.”</span> <em>The Quarterly Review of Biology</em> 83 (2): 171–93. <a href="http://www.jstor.org/stable/10.1086/587826">http://www.jstor.org/stable/10.1086/587826</a>.
+</div>
+<div id="ref-smithStepAwayStepwise2018" class="csl-entry">
+Smith, Gary. 2018. <span>“Step Away from Stepwise.”</span> <em>Journal of Big Data</em> 5 (1): 32. <a href="https://doi.org/10.1186/s40537-018-0143-6">https://doi.org/10.1186/s40537-018-0143-6</a>.
+</div>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="what-is-your-goal.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="how-to-use-this-section.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="explaining-odds-ratios.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -317,7 +417,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+    "link": "https://github.com/rstudio/bookdown-demo/edit/master/tests_model_selection_approach.Rmd",
     "text": "Edit"
   },
   "history": {

@@ -3,11 +3,12 @@
 ## Explanation
 
 ### The basics
-A simple explanation and hopefully figure of what the test does or gets at.
-Model selection looks at suites of variables in otherwise comparable models.  The models are compared by some number (such as AIC, AICc, or BIC, defined later) and ranked.  The "best" (more accurately the highest-ranked) models are the best of the set, not the best in all the possible universe.  You might have not added all the needed variables to explain your data. This approach can be modified with "model averaging" that allows you to combine multiple of the highest-ranked models.
+Model selection looks at suites of variables in otherwise comparable models.
 
-Read chapter 8 first as summary to get big picture: Burnham, Kenneth P, and David Raymond Anderson. 2008. Model Selection and Multimodel Inference: A Practical Information-Theoretic Approach. New York, NY [u.a.]: Springer.
+- The models are compared by some number (such as AIC, AICc, or BIC, defined later) and ranked.  The "best" (more accurately the highest-ranked) models are the best of the set, not the best in all the possible universe.  You might have not added all the needed variables to explain your data
+- This approach can be modified with "model averaging" that allows you to combine multiple of the highest-ranked models.
 
+Read chapter 8 of the foundational book first to see if the approach is right for you [@burnhamModelSelectionMultimodel2008].
 
 ### More technical
 
@@ -17,17 +18,26 @@ Read chapter 8 first as summary to get big picture: Burnham, Kenneth P, and Davi
 
 #### Key assumptions
 
-- Model selection does not use p-values (models are not significant or not)
 - You provide selected, well-thought-out hypotheses and compare them
-- This is best suited for comparing suites of variables instead of all possible combinations
-- Any higher-ranked models may not be the best model, only the best model you've tested
-- To find out how of the model explains your data, you can look at weights
-- You don't get to interpret the coefficients by significance like you do with regular frequentist statistics
+  - This is best suited for comparing suites of variables instead of all possible combinations
+  - Any higher-ranked models may not be the best model, only the best model you've tested
+- You give up significance (p-values) with this approach
+  - To find out how of the model explains your data, you can look at weights
+  - You don't get to interpret the coefficients by significance like you do with frequentist statistics
 
 #### Key distinctions among related methods
 - This is a suggested alternative to stepwise selection [@hegyiUsingInformationTheory2011], which is strongly advised against [@mundryStepwiseModelFitting2009; @smithStepAwayStepwise2018]
 - Classification and regression trees (also called decision trees) chose from all the variables together and suggest interactions [@oldenMachineLearningMethods2008]; for model selection you propose the models' interactions based on prior knowledge or hypotheses about how the data were formed
 
+#### Common terminology confusions
+
+- Some papers will describe the approach as "information-theoretic" [@andersonAvoidingPitfallsWhen2002] and others generally refer to the methods as "model selection" [@burnhamModelSelectionMultimodel2008]. Model selection is a type of information-theoretic approach, but information-theoretic approach may be used as shorthand for it in casual writing or conversation.
+
+- Model averaging is a type of multi-model inference but the terms are sometimes used interchangeably in more casual writing or conversation.
+
+#### Cite these
+
+@burnhamModelSelectionMultimodel2008 is the classic baseline.  The summary chapter (8) is a good starting place to understand if the approach is right for your data and problem. If you plan to use the models, then go ahead and read the whole book followed by the implementation papers above.
 
 
 #### Implementations and controversies
@@ -42,16 +52,10 @@ Read chapter 8 first as summary to get big picture: Burnham, Kenneth P, and Davi
 
 - Model averaging has some controversies about how to implement correctly [@cadeModelAveragingMuddled2015].
 
-### Most technical
-
-Burnham, Kenneth P, and David Raymond Anderson. 2008. Model Selection and Multimodel Inference: A Practical Information-Theoretic Approach. New York, NY, USA: Springer.
 
 ## Examples "in the wild"
 Citations and what is useful in the paper.  To be found.
 
 ## Reporting results
 
-Some authors are very against using both p-values and model selection together.
-
-Burnham. 2001. “Suggestions for Presenting the Results of Data Analyses.” The Journal of Wildlife Management 65 (3): 373. https://doi.org/10.2307/3803088.
-
+@andersonSuggestionsPresentingResults2001 compares how to present data analyses of typical frequentist (p-value) analyses as well as information-theoretic (model selection) and Bayesian results.  The paper mainly focuses on the advantages and ways to present the methods and analyses (results) for model selection.  They strongly advise not mixing frequentist (p-value and test statistic reporting) and information-theoretic (model selection) results. 

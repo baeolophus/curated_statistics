@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Explaining Odds Ratios | Curated Statistics</title>
   <meta name="description" content="provides supplementary explanations for Statistics Helper questionaire" />
-  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Explaining Odds Ratios | Curated Statistics" />
   <meta property="og:type" content="book" />
@@ -23,14 +23,14 @@
 <meta name="author" content="C.M. Curry" />
 
 
-<meta name="date" content="2025-07-25" />
+<meta name="date" content="2026-05-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="how-to-use-this-section.html"/>
+<link rel="prev" href="model-selection-as-an-approach.html"/>
 <link rel="next" href="principal-components-analysis.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -55,8 +55,9 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -66,7 +67,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -183,59 +184,69 @@ div.csl-indent {
 </ul></li>
 <li class="part"><span><b>II Specific tests</b></span></li>
 <li class="chapter" data-level="" data-path="how-to-use-this-section.html"><a href="how-to-use-this-section.html"><i class="fa fa-check"></i>How to use this section</a></li>
+<li class="chapter" data-level="" data-path="model-selection-as-an-approach.html"><a href="model-selection-as-an-approach.html"><i class="fa fa-check"></i>Model selection as an approach</a>
+<ul>
+<li class="chapter" data-level="3.6" data-path="model-selection-as-an-approach.html"><a href="model-selection-as-an-approach.html#explanation"><i class="fa fa-check"></i><b>3.6</b> Explanation</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="model-selection-as-an-approach.html"><a href="model-selection-as-an-approach.html#the-basics"><i class="fa fa-check"></i><b>3.6.1</b> The basics</a></li>
+<li class="chapter" data-level="3.6.2" data-path="model-selection-as-an-approach.html"><a href="model-selection-as-an-approach.html#more-technical"><i class="fa fa-check"></i><b>3.6.2</b> More technical</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="model-selection-as-an-approach.html"><a href="model-selection-as-an-approach.html#examples-in-the-wild"><i class="fa fa-check"></i><b>3.7</b> Examples “in the wild”</a></li>
+<li class="chapter" data-level="3.8" data-path="model-selection-as-an-approach.html"><a href="model-selection-as-an-approach.html#reporting-results"><i class="fa fa-check"></i><b>3.8</b> Reporting results</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="explaining-odds-ratios.html"><a href="explaining-odds-ratios.html"><i class="fa fa-check"></i>Explaining Odds Ratios</a>
 <ul>
-<li class="chapter" data-level="3.6" data-path="explaining-odds-ratios.html"><a href="explaining-odds-ratios.html#explanation"><i class="fa fa-check"></i><b>3.6</b> Explanation</a>
+<li class="chapter" data-level="3.9" data-path="explaining-odds-ratios.html"><a href="explaining-odds-ratios.html#explanation-1"><i class="fa fa-check"></i><b>3.9</b> Explanation</a>
 <ul>
-<li class="chapter" data-level="3.6.1" data-path="explaining-odds-ratios.html"><a href="explaining-odds-ratios.html#the-basics"><i class="fa fa-check"></i><b>3.6.1</b> The basics</a></li>
-<li class="chapter" data-level="3.6.2" data-path="explaining-odds-ratios.html"><a href="explaining-odds-ratios.html#more-technical"><i class="fa fa-check"></i><b>3.6.2</b> More technical</a></li>
-<li class="chapter" data-level="3.6.3" data-path="explaining-odds-ratios.html"><a href="explaining-odds-ratios.html#most-technical"><i class="fa fa-check"></i><b>3.6.3</b> Most technical</a></li>
+<li class="chapter" data-level="3.9.1" data-path="explaining-odds-ratios.html"><a href="explaining-odds-ratios.html#the-basics-1"><i class="fa fa-check"></i><b>3.9.1</b> The basics</a></li>
+<li class="chapter" data-level="3.9.2" data-path="explaining-odds-ratios.html"><a href="explaining-odds-ratios.html#more-technical-1"><i class="fa fa-check"></i><b>3.9.2</b> More technical</a></li>
+<li class="chapter" data-level="3.9.3" data-path="explaining-odds-ratios.html"><a href="explaining-odds-ratios.html#most-technical"><i class="fa fa-check"></i><b>3.9.3</b> Most technical</a></li>
 </ul></li>
-<li class="chapter" data-level="3.7" data-path="explaining-odds-ratios.html"><a href="explaining-odds-ratios.html#examples-in-the-wild"><i class="fa fa-check"></i><b>3.7</b> Examples “in the wild”</a></li>
+<li class="chapter" data-level="3.10" data-path="explaining-odds-ratios.html"><a href="explaining-odds-ratios.html#examples-in-the-wild-1"><i class="fa fa-check"></i><b>3.10</b> Examples “in the wild”</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html"><i class="fa fa-check"></i>Principal components analysis</a>
 <ul>
-<li class="chapter" data-level="3.8" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#explanation."><i class="fa fa-check"></i><b>3.8</b> Explanation.</a>
+<li class="chapter" data-level="3.11" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#explanation."><i class="fa fa-check"></i><b>3.11</b> Explanation.</a>
 <ul>
-<li class="chapter" data-level="3.8.1" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#questions-and-data-types-1"><i class="fa fa-check"></i><b>3.8.1</b> Questions and data types</a></li>
-<li class="chapter" data-level="3.8.2" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#key-assumptions-1"><i class="fa fa-check"></i><b>3.8.2</b> Key assumptions</a></li>
-<li class="chapter" data-level="3.8.3" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#key-distinctions-among-methods-within-pca"><i class="fa fa-check"></i><b>3.8.3</b> Key distinctions among methods within PCA</a></li>
+<li class="chapter" data-level="3.11.1" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#questions-and-data-types-2"><i class="fa fa-check"></i><b>3.11.1</b> Questions and data types</a></li>
+<li class="chapter" data-level="3.11.2" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#key-assumptions-2"><i class="fa fa-check"></i><b>3.11.2</b> Key assumptions</a></li>
+<li class="chapter" data-level="3.11.3" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#key-distinctions-among-methods-within-pca"><i class="fa fa-check"></i><b>3.11.3</b> Key distinctions among methods within PCA</a></li>
 </ul></li>
-<li class="chapter" data-level="3.9" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#email-text"><i class="fa fa-check"></i><b>3.9</b> email text</a>
+<li class="chapter" data-level="3.12" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#email-text"><i class="fa fa-check"></i><b>3.12</b> email text</a>
 <ul>
-<li class="chapter" data-level="3.9.1" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#cartctree-explanations"><i class="fa fa-check"></i><b>3.9.1</b> CART/ctree explanations</a></li>
-<li class="chapter" data-level="3.9.2" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#examples-of-pca-in-the-wild"><i class="fa fa-check"></i><b>3.9.2</b> Examples of PCA in the wild:</a></li>
-<li class="chapter" data-level="3.9.3" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#once-you-have-decided-to-use-it-check-implementation"><i class="fa fa-check"></i><b>3.9.3</b> Once you have decided to use it, check implementation</a></li>
+<li class="chapter" data-level="3.12.1" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#cartctree-explanations"><i class="fa fa-check"></i><b>3.12.1</b> CART/ctree explanations</a></li>
+<li class="chapter" data-level="3.12.2" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#examples-of-pca-in-the-wild"><i class="fa fa-check"></i><b>3.12.2</b> Examples of PCA in the wild:</a></li>
+<li class="chapter" data-level="3.12.3" data-path="principal-components-analysis.html"><a href="principal-components-analysis.html#once-you-have-decided-to-use-it-check-implementation"><i class="fa fa-check"></i><b>3.12.3</b> Once you have decided to use it, check implementation</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="intraclass-correlation-coefficient-a.k.a.-repeatability.html"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html"><i class="fa fa-check"></i>Intraclass Correlation Coefficient a.k.a. repeatability</a>
 <ul>
-<li class="chapter" data-level="3.10" data-path="intraclass-correlation-coefficient-a.k.a.-repeatability.html"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#explanation-1"><i class="fa fa-check"></i><b>3.10</b> Explanation</a>
+<li class="chapter" data-level="3.13" data-path="intraclass-correlation-coefficient-a.k.a.-repeatability.html"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#explanation-2"><i class="fa fa-check"></i><b>3.13</b> Explanation</a>
 <ul>
-<li class="chapter" data-level="3.10.1" data-path="intraclass-correlation-coefficient-a.k.a.-repeatability.html"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#the-basics-1"><i class="fa fa-check"></i><b>3.10.1</b> The basics</a></li>
-<li class="chapter" data-level="3.10.2" data-path="intraclass-correlation-coefficient-a.k.a.-repeatability.html"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#more-technical-1"><i class="fa fa-check"></i><b>3.10.2</b> More technical</a></li>
-<li class="chapter" data-level="3.10.3" data-path="intraclass-correlation-coefficient-a.k.a.-repeatability.html"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#most-technical-1"><i class="fa fa-check"></i><b>3.10.3</b> Most technical</a></li>
+<li class="chapter" data-level="3.13.1" data-path="intraclass-correlation-coefficient-a.k.a.-repeatability.html"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#the-basics-2"><i class="fa fa-check"></i><b>3.13.1</b> The basics</a></li>
+<li class="chapter" data-level="3.13.2" data-path="intraclass-correlation-coefficient-a.k.a.-repeatability.html"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#more-technical-2"><i class="fa fa-check"></i><b>3.13.2</b> More technical</a></li>
+<li class="chapter" data-level="3.13.3" data-path="intraclass-correlation-coefficient-a.k.a.-repeatability.html"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#most-technical-1"><i class="fa fa-check"></i><b>3.13.3</b> Most technical</a></li>
 </ul></li>
-<li class="chapter" data-level="3.11" data-path="intraclass-correlation-coefficient-a.k.a.-repeatability.html"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#examples-in-the-wild-1"><i class="fa fa-check"></i><b>3.11</b> Examples “in the wild”</a></li>
+<li class="chapter" data-level="3.14" data-path="intraclass-correlation-coefficient-a.k.a.-repeatability.html"><a href="intraclass-correlation-coefficient-a.k.a.-repeatability.html#examples-in-the-wild-2"><i class="fa fa-check"></i><b>3.14</b> Examples “in the wild”</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="supervised-learning.html"><a href="supervised-learning.html"><i class="fa fa-check"></i>Supervised learning</a>
 <ul>
-<li class="chapter" data-level="3.12" data-path="supervised-learning.html"><a href="supervised-learning.html#decision-trees-also-known-as-classification-and-regression-trees-cart-conditional-inference-trees"><i class="fa fa-check"></i><b>3.12</b> Decision trees (also known as classification and regression trees [CART], conditional inference trees)</a>
+<li class="chapter" data-level="3.15" data-path="supervised-learning.html"><a href="supervised-learning.html#decision-trees-also-known-as-classification-and-regression-trees-cart-conditional-inference-trees"><i class="fa fa-check"></i><b>3.15</b> Decision trees (also known as classification and regression trees [CART], conditional inference trees)</a>
 <ul>
-<li class="chapter" data-level="3.12.1" data-path="supervised-learning.html"><a href="supervised-learning.html#general-explanations-and-interpretation"><i class="fa fa-check"></i><b>3.12.1</b> General explanations and interpretation</a></li>
-<li class="chapter" data-level="3.12.2" data-path="supervised-learning.html"><a href="supervised-learning.html#examples-of-cart-in-the-wild"><i class="fa fa-check"></i><b>3.12.2</b> Examples of CART in the wild</a></li>
-<li class="chapter" data-level="3.12.3" data-path="supervised-learning.html"><a href="supervised-learning.html#how-and-why-to-run-the-ctree-version-of-cartdecision-trees"><i class="fa fa-check"></i><b>3.12.3</b> How and why to run the <code>ctree</code> version of CART/decision trees</a></li>
+<li class="chapter" data-level="3.15.1" data-path="supervised-learning.html"><a href="supervised-learning.html#general-explanations-and-interpretation"><i class="fa fa-check"></i><b>3.15.1</b> General explanations and interpretation</a></li>
+<li class="chapter" data-level="3.15.2" data-path="supervised-learning.html"><a href="supervised-learning.html#examples-of-cart-in-the-wild"><i class="fa fa-check"></i><b>3.15.2</b> Examples of CART in the wild</a></li>
+<li class="chapter" data-level="3.15.3" data-path="supervised-learning.html"><a href="supervised-learning.html#how-and-why-to-run-the-ctree-version-of-cartdecision-trees"><i class="fa fa-check"></i><b>3.15.3</b> How and why to run the <code>ctree</code> version of CART/decision trees</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="what-each-section-has.html"><a href="what-each-section-has.html"><i class="fa fa-check"></i>What each section has</a>
 <ul>
-<li class="chapter" data-level="3.13" data-path="what-each-section-has.html"><a href="what-each-section-has.html#explanation-2"><i class="fa fa-check"></i><b>3.13</b> Explanation</a>
+<li class="chapter" data-level="3.16" data-path="what-each-section-has.html"><a href="what-each-section-has.html#explanation-3"><i class="fa fa-check"></i><b>3.16</b> Explanation</a>
 <ul>
-<li class="chapter" data-level="3.13.1" data-path="what-each-section-has.html"><a href="what-each-section-has.html#the-basics-2"><i class="fa fa-check"></i><b>3.13.1</b> The basics</a></li>
-<li class="chapter" data-level="3.13.2" data-path="what-each-section-has.html"><a href="what-each-section-has.html#more-technical-2"><i class="fa fa-check"></i><b>3.13.2</b> More technical</a></li>
-<li class="chapter" data-level="3.13.3" data-path="what-each-section-has.html"><a href="what-each-section-has.html#most-technical-2"><i class="fa fa-check"></i><b>3.13.3</b> Most technical</a></li>
+<li class="chapter" data-level="3.16.1" data-path="what-each-section-has.html"><a href="what-each-section-has.html#the-basics-3"><i class="fa fa-check"></i><b>3.16.1</b> The basics</a></li>
+<li class="chapter" data-level="3.16.2" data-path="what-each-section-has.html"><a href="what-each-section-has.html#more-technical-3"><i class="fa fa-check"></i><b>3.16.2</b> More technical</a></li>
+<li class="chapter" data-level="3.16.3" data-path="what-each-section-has.html"><a href="what-each-section-has.html#most-technical-2"><i class="fa fa-check"></i><b>3.16.3</b> Most technical</a></li>
 </ul></li>
-<li class="chapter" data-level="3.14" data-path="what-each-section-has.html"><a href="what-each-section-has.html#examples-in-the-wild-2"><i class="fa fa-check"></i><b>3.14</b> Examples “in the wild”</a></li>
+<li class="chapter" data-level="3.17" data-path="what-each-section-has.html"><a href="what-each-section-has.html#examples-in-the-wild-3"><i class="fa fa-check"></i><b>3.17</b> Examples “in the wild”</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -259,17 +270,17 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="explaining-odds-ratios" class="section level1 unnumbered hasAnchor">
 <h1>Explaining Odds Ratios<a href="explaining-odds-ratios.html#explaining-odds-ratios" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="explanation" class="section level2 hasAnchor" number="3.6">
-<h2><span class="header-section-number">3.6</span> Explanation<a href="explaining-odds-ratios.html#explanation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="the-basics" class="section level3 hasAnchor" number="3.6.1">
-<h3><span class="header-section-number">3.6.1</span> The basics<a href="explaining-odds-ratios.html#the-basics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="explanation-1" class="section level2 hasAnchor" number="3.9">
+<h2><span class="header-section-number">3.9</span> Explanation<a href="explaining-odds-ratios.html#explanation-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="the-basics-1" class="section level3 hasAnchor" number="3.9.1">
+<h3><span class="header-section-number">3.9.1</span> The basics<a href="explaining-odds-ratios.html#the-basics-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In some regression models (examples here are logistic and Poisson regression), instead of a beta coefficient that can be interpreted as-is (unit of predictor change results in coefficient amount of response change), you are given log odds <span class="citation">(<a href="#ref-dwinAnswerHowInterpret2011">DWin 2011</a>)</span>. The log odds must be converted to odds ratios, or their Poisson similar cousin relative risk/relative odds. You can present both the original log odds estimate plus the odds ratio / relative risk <span class="citation">(<a href="#ref-perraillonInterpretingModelEstimates">Perraillon, n.d.</a>)</span> in your results table.</p>
 <p>UCLA’s Statistics Center has an overview <span class="citation">(<a href="#ref-FAQHowInterpret"><span>“<span>FAQ</span>: <span>How</span> Do <span>I</span> Interpret Odds Ratios in Logistic Regression?”</span> n.d.</a>)</span> for logistic regression that goes from probabilities to odds to log odds to odds ratios. Helpfully, they show examples for a variety of types of predictor variables (none, categorical, numeric, interactions).</p>
 </div>
-<div id="more-technical" class="section level3 hasAnchor" number="3.6.2">
-<h3><span class="header-section-number">3.6.2</span> More technical<a href="explaining-odds-ratios.html#more-technical" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="questions-and-data-types" class="section level4 hasAnchor" number="3.6.2.1">
-<h4><span class="header-section-number">3.6.2.1</span> Questions and data types<a href="explaining-odds-ratios.html#questions-and-data-types" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="more-technical-1" class="section level3 hasAnchor" number="3.9.2">
+<h3><span class="header-section-number">3.9.2</span> More technical<a href="explaining-odds-ratios.html#more-technical-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="questions-and-data-types-1" class="section level4 hasAnchor" number="3.9.2.1">
+<h4><span class="header-section-number">3.9.2.1</span> Questions and data types<a href="explaining-odds-ratios.html#questions-and-data-types-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Example problem structures and types of data you need.</p>
 <ul>
 <li><p>The whole analysis page <span class="citation">(<a href="#ref-PoissonRegressionData"><span>“Poisson <span>Regression</span> | <span>R Data Analysis Examples</span>”</span> n.d.</a>)</span>, specifically look at the secion called “Poisson regression” about halfway down the page and the second bullet point for interpreting coefficients specifically.</p></li>
@@ -278,29 +289,29 @@ div.csl-indent {
 <li><p>Box 13.2 in Quinn and Keough also has a good work-through (logistic regression, but as long as both use the default log link the interpretation is similar).</p></li>
 </ul>
 </div>
-<div id="key-assumptions" class="section level4 hasAnchor" number="3.6.2.2">
-<h4><span class="header-section-number">3.6.2.2</span> Key assumptions<a href="explaining-odds-ratios.html#key-assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="key-assumptions-1" class="section level4 hasAnchor" number="3.9.2.2">
+<h4><span class="header-section-number">3.9.2.2</span> Key assumptions<a href="explaining-odds-ratios.html#key-assumptions-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Did you run a generalized linear model (GLM <span class="citation">Monica (<a href="#ref-monicaAnswerHowDoes2013">2013</a>)</span>) with a log link or logit link? Then yes.</p>
 </div>
-<div id="key-distinctions-among-related-methods" class="section level4 hasAnchor" number="3.6.2.3">
-<h4><span class="header-section-number">3.6.2.3</span> Key distinctions among related methods<a href="explaining-odds-ratios.html#key-distinctions-among-related-methods" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="key-distinctions-among-related-methods-1" class="section level4 hasAnchor" number="3.9.2.3">
+<h4><span class="header-section-number">3.9.2.3</span> Key distinctions among related methods<a href="explaining-odds-ratios.html#key-distinctions-among-related-methods-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Odds ratio for logistic vs relative risk for Poisson <span class="citation">(<a href="#ref-dwinAnswerHowInterpret2011">DWin 2011</a>)</span>.
 There is a good summary chapter about odds ratios vs log odds vs other related confusing terms.</p>
 </div>
-<div id="implementations-and-controversies" class="section level4 hasAnchor" number="3.6.2.4">
-<h4><span class="header-section-number">3.6.2.4</span> Implementations and controversies<a href="explaining-odds-ratios.html#implementations-and-controversies" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="implementations-and-controversies-1" class="section level4 hasAnchor" number="3.9.2.4">
+<h4><span class="header-section-number">3.9.2.4</span> Implementations and controversies<a href="explaining-odds-ratios.html#implementations-and-controversies-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Very helpful to plot your data <span class="citation">(<a href="#ref-cameronAnswerHowCan2021">Cameron 2021</a>)</span> so you are interpreting in the correct direction, as for any type of regression.</p>
 </div>
 </div>
-<div id="most-technical" class="section level3 hasAnchor" number="3.6.3">
-<h3><span class="header-section-number">3.6.3</span> Most technical<a href="explaining-odds-ratios.html#most-technical" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="most-technical" class="section level3 hasAnchor" number="3.9.3">
+<h3><span class="header-section-number">3.9.3</span> Most technical<a href="explaining-odds-ratios.html#most-technical" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>Full explanation of the equations used to calculate and differences among odds ratios, probability, relative risk <span class="citation">(<a href="#ref-perraillonChapter6Marginal">Perraillon and Lindrooth, n.d.</a>)</span></li>
 </ul>
 </div>
 </div>
-<div id="examples-in-the-wild" class="section level2 hasAnchor" number="3.7">
-<h2><span class="header-section-number">3.7</span> Examples “in the wild”<a href="explaining-odds-ratios.html#examples-in-the-wild" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="examples-in-the-wild-1" class="section level2 hasAnchor" number="3.10">
+<h2><span class="header-section-number">3.10</span> Examples “in the wild”<a href="explaining-odds-ratios.html#examples-in-the-wild-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Citations and what is useful in the paper.</p>
 
 </div>
@@ -340,7 +351,7 @@ Perraillon, Marcelo Coca, and Richard C Lindrooth. n.d. <span>“Chapter 6: <spa
           </div>
         </div>
       </div>
-<a href="how-to-use-this-section.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="model-selection-as-an-approach.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="principal-components-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
